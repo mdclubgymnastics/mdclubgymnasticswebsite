@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UMD Gymnastics Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="shellIcon.png">
+</head>
+
+<body>
+
+  <!-- Logo -->
+  <div style="display: flex; justify-content: center; padding-bottom: 8px;">
+    <img src="clubLogo.png" alt="UMD Club Gymnastics" style="width: 20%;">
+  </div>
+
+  <!-- Hamburger and overlay -->
+  <button id="navToggle" class="hamburger" aria-label="Toggle navigation">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  <div id="overlay" class="overlay"></div>
+
+  <!-- Desktop Navbar -->
+  <nav id="navbar">
+    <ul>
+      <li><a onclick="showPage('home', '#home')" class="active">Home</a></li>
+      <li><a onclick="showPage('about', '#about')">About</a></li>
+      <li><a onclick="showPage('schedule', '#schedule')">Schedule</a></li>
+      <li><a onclick="showPage('fundraising', '#fundraising')">Fundraising</a></li>
+      <li><a onclick="showPage('contact', '#contact')">Contact</a></li>
+      <div class="nav-highlight" id="navHighlight"></div>
+    </ul>
+  </nav>
+
+  <!-- Sidebar container (empty, JS will inject clone here) -->
+  <div id="mobileNavContainer"></div>
+
+  <!-- Page Content -->
+  <div id="main-content">
+    <div id="home" class="page-block active">
+      <h1>Welcome to the UMD Gymnastics Club</h1>
+      <p style="justify-self: center;">Now a proud <strong>CO-ED team</strong> at the University of Maryland!</p>
+
+      <p>We’re open to all skill levels, from beginners to experienced gymnasts. Whether you’re just getting started or
+        you’ve competed for years, you’ll find a supportive and competitive community here.</p>
+
+      <p>We offer a fun and flexible training environment with optional competitions, travel opportunities, and
+        team-building events throughout the year.</p>
+
+      <p>Our team competes under USA Gymnastics Level 9 rules, but members can choose their own level based on comfort
+        and experience. Meets are optional but encouraged!</p>
+
+      <p>We practice in an open-gym style format with coach-led spotting, corrections, and conditioning. Team members
+        are welcome to train at their own pace.</p>
+
+      <p>Members can purchase club-branded Under Armour gear at a team discount each semester.</p>
+
+      <p>Stay connected and follow us on social media for team updates, photos, and announcements!</p>
+
+    </div>
+    <div id="about" class="page-block">
+      <h2>About Us</h2>
+      <p>The Maryland Club Gymnastics Team is established for the expressed purpose of extending the opportunity of
+        competitive gymnastics to all who are interested and to provide a positive gymnastics experience for all
+        participants.</p>
+
+      <p>We welcome members of all levels and abilities—from beginners to Level 10 gymnasts—and compete in 2–3 meets per
+        semester around the mid‑Atlantic, as well as attending NAIGC Nationals each April.</p>
+      <div class="section-end">
+      </div>
+      <h3>General Information</h3>
+      <p>As of September 2017, we are a <strong>co‑ed club</strong>! Anyone can join and use both Women’s and Men’s
+        Artistic Gymnastics equipment.</p>
+
+      <p>Practices are run in an open‑gym style with the first half hour as a group stretch and the last half hour
+        optional team conditioning. Members are free to come and go, choose the events they work on, and practice skills
+        within their range.</p>
+
+      <p>We have a coach who provides spotting, suggests drills, gives corrections, and leads conditioning.</p>
+
+      <p>No prior experience is required—we welcome members of <strong>all skill levels</strong>.</p>
+      <div class="section-end"></div>
+      <h3>Club Fees</h3>
+      <p>Season fees are $100/year or $50/semester. Fees should be paid no later than your third practice.</p>
+      <div class="section-end"></div>
+      <h3>Competitions</h3>
+      <p>Competitions are optional but strongly encouraged—they're lots of fun! The team pays for hotel and meet
+        expenses, so fundraising is key. We attend 4–6 competitions per year, including venues like Virginia Tech, JMU,
+        Salisbury University, our annual home meet, and Nationals in April.</p>
+
+      <p>We compete under USA Gymnastics Level 9 rules, although individuals may choose their own level.</p>
+      <div class="section-end"></div>
+      <h3>Club Under Armour Apparel</h3>
+      <p>Each semester, members can order club‑branded Under Armour gear (sweatshirts, leggings, tees, etc.) at up to a
+        50% discount.</p>
+      <div class="section-end"></div>
+      <h3>Community Service</h3>
+      <p>We give back through community service each semester—making hospital cards, running canned‑food drives, and
+        combining service with fun team events like taco dinners or ice cream parties.</p>
+
+
+    </div>
+    <div id="schedule" class="page-block">
+      <h2>Club Schedules</h2>
+      <div class="schedule-cards-container">
+        <div class="card">
+          <h3 class="card-subtitle">Practice Times</h3>
+          <ul class="schedule-list">
+            <li><strong>Tuesdays:</strong> 8:30 – 10:30 p.m.</li>
+            <li><strong>Saturdays:</strong> 6:30 – 8:30 p.m.</li>
+          </ul>
+          <p class="note">Check the team email or GroupMe for practice updates and changes.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-subtitle">Competition Schedule</h3>
+          <ul class="schedule-list">
+            <li><strong>November 69th, 2025</strong> - Fall Home Competition: Terrapin Invitational- School of Public
+              Health, University of Maryland </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div id="fundraising" class="page-block">
+      <h2>Fundraising Oppurtunities</h2>
+      <p>Fundraising is one of the most important aspects of our student-run sports club. In order to compete for our
+        team at Nationals, you are expected to participate in fundraising, which goes towards your payment for the trip.
+      </p>
+      <div class="section-end"></div>
+      <h2>Fundraising Requirements</h2>
+      <ul class="fundraising-list">
+        <li>All gymnasts are encouraged to participate in fundraising.</li>
+        <li>Members who are interested in, or definitely attending Nationals <strong>must</strong> participate in
+          fundraising.</li>
+        <li>As a student-run club, we receive limited funding from the University—Nationals fees are the responsibility
+          of each attending member.</li>
+        <li>Any money a member fundraises is applied directly to their personal Nationals cost.</li>
+        <li>Members who meet the fundraising goal for Nationals can typically attend the trip at no personal cost.</li>
+        <li>Most of our members attend Nationals for free each year by meeting their fundraising goals.</li>
+      </ul>
+
+    </div>
+    <div id="contact" class="page-block">
+      <h2>Contact Us</h2>
+      <p><span style="font-weight: bold;">President:</span> Quinlan Ngo</p>
+      <p><span style="font-weight: bold;">Vice President:</span> Quinlan Non Governmental Organization</p>
+      <p><span style="font-weight: bold;">Secretary:</span> Quinlan Netcode for Game Objects</p>
+      <p><span style="font-weight: bold;">Treasurer:</span> Quinlan Never Grow Old</p>
+      <p><span style="font-weight: bold;">Fundraising Chair:</span> ​Quinlan Non Gazetted Officer</p>
+      <p><span style="font-weight: bold;">Competition Director:</span> Quinlan National Gas Outlet</p>
+      <p><span style="font-weight: bold;">Social Media and Outreach Chair:</span> Quinlan New Galactic Order</p>
+      <br>
+      <p><span style="font-weight: bold;">Club Email Address:</span> mdclubgymnastics@gmail.com</p>
+      <p>Visit our Home page to see how to follow us on social media to get all of our latest updates (including any
+        announcements by the club, or videos from practice!)
+      <p>
+      <p style="font-weight: bold;">Please don't hesitate to email us with any questions about our club, we are happy to
+        answer!</p>
+      <div style="width:100%;max-width:700px;margin:auto;">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSehXg67rEtAZT8QI_XoWeUQQmRuoxP6Pubpm9xH2a_-w3586A/viewform?embedded=true"
+          style="width:100%;min-height:1000px;aspect-ratio:1/1.3;border:none;" allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">Loading…</iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    function showPage(pageId, path) {
+      // Animate out only the current active block
+      const activeBlock = document.querySelector('.page-block.active');
+      // Hide all other blocks (except the one we're about to show)
+      document.querySelectorAll('.page-block').forEach(block => {
+        if (block !== activeBlock && block.id !== pageId) {
+          block.classList.remove('active', 'snap-out');
+          block.style.display = 'none';
+        }
+      });
+
+      function showTargetPage() {
+        // Add active class to the target block
+        const target = document.getElementById(pageId);
+        if (target) {
+          target.style.display = 'block';
+          // Force reflow to restart animation if needed
+          void target.offsetWidth;
+          target.classList.add('active');
+        }
+
+        document.querySelectorAll('#navbar a').forEach(link => link.classList.remove('active'));
+        const clicked = Array.from(document.querySelectorAll('#navbar a')).find(link => link.textContent.toLowerCase() === pageId);
+        if (clicked) clicked.classList.add('active');
+
+        moveHighlight(clicked);
+        if (window.location.hash !== path) {
+          history.pushState({ pageId }, '', path);
+        }
+      }
+
+      if (activeBlock) {
+        activeBlock.classList.remove('active');
+        activeBlock.classList.add('snap-out');
+        setTimeout(() => {
+          activeBlock.classList.remove('snap-out');
+          activeBlock.style.display = 'none';
+          showTargetPage();
+        }, 200); // match CSS fade-out duration
+      } else {
+        showTargetPage();
+      }
+    }
+
+    function moveHighlight(targetLink) {
+      const highlight = document.getElementById('navHighlight');
+      if (!targetLink || !highlight) return;
+      highlight.style.width = `${targetLink.offsetWidth}px`;
+      highlight.style.left = `${targetLink.offsetLeft}px`;
+    }
+
+    window.addEventListener('resize', () => {
+      const activeLink = document.querySelector('#navbar a.active');
+      if (activeLink) moveHighlight(activeLink);
+    });
+
+    window.onpopstate = (event) => {
+      const page = event.state?.pageId || 'home';
+      showPage(page, window.location.hash || '#home');
+    };
+
+    window.addEventListener('load', () => {
+      const hash = window.location.hash;
+      const routes = {
+        '#home': 'home',
+        '#about': 'about',
+        '#schedule': 'schedule',
+        '#fundraising': 'fundraising',
+        '#contact': 'contact'
+      };
+      let page, pageHash;
+      if (!hash || hash === '#' || hash === '#home') {
+        page = 'home';
+        pageHash = '#home';
+        // Ensure Home is visible and active if no hash or just #
+        document.querySelectorAll('.page-block').forEach(block => {
+          block.classList.remove('active');
+          block.style.display = 'none';
+        });
+        const home = document.getElementById('home');
+        if (home) {
+          home.style.display = 'block';
+          home.classList.add('active');
+        }
+        document.querySelectorAll('#navbar a').forEach(link => link.classList.remove('active'));
+        const homeLink = Array.from(document.querySelectorAll('#navbar a')).find(link => link.textContent.toLowerCase() === 'home');
+        if (homeLink) homeLink.classList.add('active');
+        moveHighlight(homeLink);
+        history.replaceState({ pageId: 'home' }, '', '#home');
+        return;
+      } else {
+        page = routes[hash] || 'home';
+        pageHash = hash;
+      }
+      showPage(page, pageHash);
+      const activeLink = document.querySelector('#navbar a.active');
+      if (activeLink) moveHighlight(activeLink);
+    });
+
+    // Mobile sidebar toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      const navToggle = document.getElementById('navToggle');
+      const desktopNav = document.getElementById('navbar');
+      const mobileSidebar = document.getElementById('mobileNavContainer');
+      const overlay = document.getElementById('overlay');
+
+      // Clone desktop navbar into sidebar
+      const clonedNav = desktopNav.cloneNode(true);
+      clonedNav.id = 'navbar-mobile';
+      mobileSidebar.appendChild(clonedNav);
+
+      const mobileLinks = clonedNav.querySelectorAll('a');
+
+
+      function closeSidebar() {
+        mobileSidebar.classList.remove('open');
+        overlay.classList.remove('show');
+        navToggle.classList.remove('open');
+        navToggle.classList.remove('animate-x');
+      }
+
+      navToggle.addEventListener('click', () => {
+        const isOpen = mobileSidebar.classList.contains('open');
+        if (isOpen) {
+          closeSidebar();
+        } else {
+          mobileSidebar.classList.add('open');
+          overlay.classList.add('show');
+          navToggle.classList.add('open');
+          setTimeout(() => {
+            navToggle.classList.add('animate-x');
+          }, 200); // delay matches CSS transition
+        }
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 768) closeSidebar();
+        });
+      });
+    });
+  </script>
+
+  </script>
+
+  <footer
+    style="width:100%;text-align:center;padding:1.2rem 0 0.7rem 0;font-size:0.98rem;color:#888;background:transparent;letter-spacing:0.02em;">
+    &copy; UMD Club Gymnastics 2025
+  </footer>
+  </footer>
+
+</body>
+
+</html>
