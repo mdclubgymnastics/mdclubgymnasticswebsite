@@ -316,7 +316,9 @@ body, html {
   background: #f5f5f5;
 }
 
-#navbar a.active {
+
+#navbar a.active,
+#navbar-mobile a.active {
   color: #b71c1c;
   font-weight: 700;
 }

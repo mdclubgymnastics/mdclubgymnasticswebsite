@@ -196,9 +196,18 @@
           target.classList.add('active');
         }
 
-        document.querySelectorAll('#navbar a').forEach(link => link.classList.remove('active'));
-        const clicked = Array.from(document.querySelectorAll('#navbar a')).find(link => link.textContent.toLowerCase() === pageId);
-        if (clicked) clicked.classList.add('active');
+        // Remove 'active' from all links in both navbars
+        document.querySelectorAll('#navbar a, #navbar-mobile a').forEach(link => link.classList.remove('active'));
+        // Set 'active' on the correct link in both navbars
+        const setActive = (navId) => {
+          const nav = document.getElementById(navId);
+          if (!nav) return;
+          const link = Array.from(nav.querySelectorAll('a')).find(link => link.textContent.toLowerCase() === pageId);
+          if (link) link.classList.add('active');
+          return link;
+        };
+        const clicked = setActive('navbar');
+        setActive('navbar-mobile');
 
         moveHighlight(clicked);
         if (window.location.hash !== path) {
