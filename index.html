@@ -16,7 +16,7 @@
 
   <!-- Logo -->
   <div style="display: flex; justify-content: center; padding-bottom: 8px;">
-    <img src="clubLogo.png" alt="UMD Club Gymnastics" style="width: 20%;">
+      <img onclick="showPage('home', '#home')" src="clubLogo.png" alt="UMD Club Gymnastics" style="width: 20%; cursor: pointer;">
   </div>
 
   <!-- Hamburger and overlay -->
@@ -305,9 +305,23 @@
           overlay.classList.add('show');
           navToggle.classList.add('open');
           setTimeout(() => {
-            navToggle.classList.add('animate-x');
-          }, 200); // delay matches CSS transition
+        navToggle.classList.add('animate-x');
+          }, 100); // delay matches CSS transition
         }
+      });
+
+      // Close mobile navbar on any click if it's open
+      document.addEventListener('click', (e) => {
+        const isOpen = mobileSidebar.classList.contains('open');
+        if (!isOpen) return;
+        // Don't close if click is inside sidebar or hamburger
+        if (
+          mobileSidebar.contains(e.target) ||
+          navToggle.contains(e.target)
+        ) {
+          return;
+        }
+        closeSidebar();
       });
 
       overlay.addEventListener('click', closeSidebar);

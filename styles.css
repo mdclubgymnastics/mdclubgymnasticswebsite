@@ -141,6 +141,7 @@ footer {
   }
   #mobileNavContainer.open {
     left: 0;
+    z-index: 1051;
   }
   .overlay {
     display: none;
@@ -153,7 +154,7 @@ footer {
     width: 100vw;
     height: 100vh;
     background: rgba(0,0,0,0.4);
-    z-index: 1049;
+    z-index: 1100;
   }
 
   /* Cloned nav inside sidebar */
